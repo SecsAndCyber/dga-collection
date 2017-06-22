@@ -24,10 +24,10 @@ class Necurs(DGAMalware):
     return 4 * 24 * 3600
 
   @classmethod
-  def domainsFor(self, date):
+  def domainsFor(self, date, family):
     domains = []
     for sequence_nr in range(2048):
-      domains.append(self.generateDomain(sequence_nr, 9, date))
+      domains.append(self.generateDomain(sequence_nr, family, date))
     return domains
 
   @classmethod
